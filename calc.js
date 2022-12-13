@@ -19,3 +19,9 @@ function renderDisplay(value) {
     displayDiv.textContent = operationNumber;
   }
 }
+
+function resetDisplay() {
+  const displayDiv = document.querySelector(".display-row");
+  displayDiv.textContent = 0;
+  operationNumber = "";
+}
