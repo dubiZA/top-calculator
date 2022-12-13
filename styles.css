@@ -38,6 +38,14 @@ button {
   font-size: 25px;
   min-width: 85px;
   border-radius: 85px;
+  transition-duration: 250ms;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  transition-duration: 250ms;
+  transition-
 }
 
 button#clear {
