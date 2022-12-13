@@ -1,6 +1,6 @@
 * {
-  box-sizing: border-box;
-  /* border: 1px solid black; */
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 body {
@@ -12,15 +12,15 @@ body {
 }
 
 .calculator {
-  /* width: 400px; */
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 .display-row {
-  height: 100px;
-  border: 1px solid black;
+  height: 85px;
+  text-align: right;
+  font-size: 65px;
 }
 
 .buttons-row {
@@ -29,33 +29,36 @@ body {
 }
 
 button {
-  height: 100px;
+  height: 85px;
   flex: 1;
   border: none;
   padding: 0;
   background-color: rgb(59, 59, 59);
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: larger;
-  min-width: 100px;
+  font-size: 25px;
+  min-width: 85px;
+  border-radius: 85px;
 }
 
-#clear {
+button#clear {
   flex: 3;
 }
 
-#zero {
+button#zero {
   flex: 2;
-}
-
-.full-round {
-  border-radius: 100%;
-}
-
-.long-rounded {
-  border-radius: 100px;
 }
 
 .operator-buttons {
   background-color: orange;
+  max-width: 85px;
+  font-size: 35px;
+}
+
+.special-buttons {
+  background-color: rgb(190, 190, 190);
+  color: black;
+}
+
+.long-button-left {
+  text-align: left;
+  padding-left: 35px;
 }
