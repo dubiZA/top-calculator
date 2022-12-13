@@ -11,3 +11,11 @@ buttons.forEach(function(button) {
     }
   });
 });
+
+function renderDisplay(value) {
+  const displayDiv = document.querySelector(".display-row");
+  if (operationNumber.length < 9 && operationNumber !== "0") {
+    operationNumber += value;
+    displayDiv.textContent = operationNumber;
+  }
+}
