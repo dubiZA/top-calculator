@@ -1,3 +1,13 @@
+let currentNumber = "";
+
+const numberButtons = document.querySelectorAll(".number-button");
+numberButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    storeCurrentNumber(button.dataset.value);
+    populateDisplay(currentNumber);
+  });
+});
+
 function add(valueA, valueB) {
   return valueA + valueB;
 }
@@ -35,6 +45,15 @@ function operate(operator, valueA, valueB) {
   return result;
 }
 
+function populateDisplay(numberToDisplay) {
+  const displayDiv = document.querySelector(".display-row");
+  displayDiv.textContent = numberToDisplay;
+}
+
+function storeCurrentNumber(numberToStore) {
+    currentNumber += numberToStore;
+    console.log(currentNumber);
+}
 
 // Starting From Scratch.
 

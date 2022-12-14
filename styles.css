@@ -55,13 +55,13 @@ button#zero {
   flex: 2;
 }
 
-.operator-buttons {
+.operator-button {
   background-color: orange;
   max-width: 85px;
   font-size: 35px;
 }
 
-.special-buttons {
+.special-button {
   background-color: rgb(190, 190, 190);
   color: black;
 }
