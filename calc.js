@@ -14,6 +14,27 @@ function divide(valueA, valueB) {
   return valueA / valueB;
 }
 
+function operate(operator, valueA, valueB) {
+  let result;
+  switch (operator) {
+    case "add":
+      result = add(valueA, valueB);
+      break;
+    case "subtract":
+      result = subtract(valueA, valueB);
+      break;
+    case "multiply":
+      result = multiply(valueA, valueB);
+      break;
+    case "divide":
+      result = divide(valueA, valueB);
+      break;
+    default:
+      break;
+  }
+  return result;
+}
+
 
 // Starting From Scratch.
 
