@@ -1,38 +1,105 @@
-let operationNumber = "";
-
-const buttons = document.querySelectorAll("button");
-buttons.forEach(function(button) {
-  button.addEventListener("click", function() {
-    if (button.dataset.value) {
-      storeOperationNumber(button.dataset.value);
-    }
-    if (button.id === "clear") {
-      resetDisplay();
-    }
-  });
-});
-
-function storeOperationNumber(value) {
-  if (value !== "0") {
-    if (operationNumber.length < 9) {
-      operationNumber += value;
-      renderDisplay(operationNumber);
-    }
-  } else if (value === "0" && operationNumber !== "") {
-    if (operationNumber.length < 9) {
-      operationNumber += value;
-      renderDisplay(operationNumber);
-    }
-  }
+function add(valueA, valueB) {
+  return valueA + valueB;
 }
 
-function renderDisplay(value) {
-  const displayDiv = document.querySelector(".display-row");
-  displayDiv.textContent = value;
+function subtract(valueA, valueB) {
+  return valueA - valueB;
 }
 
-function resetDisplay() {
-  const displayDiv = document.querySelector(".display-row");
-  displayDiv.textContent = "0";
-  operationNumber = "";
+function multiply(valueA, valueB) {
+  return valueA * valueB;
 }
+
+function divide(valueA, valueB) {
+  return valueA / valueB;
+}
+
+
+// Starting From Scratch.
+
+// let currentNumber = "";
+// let operator = "";
+// let firstNumber = "";
+// let secondNumber = "";
+
+// const buttons = document.querySelectorAll("button");
+// buttons.forEach(function(button) {
+//   button.addEventListener("click", function() {
+//     if (button.dataset.value) {
+//       storeCurrentNumber(button.dataset.value);
+//     }
+//     if (button.id === "clear") {
+//       reset();
+//     }
+//     if (button.id === "add") {
+//       storeOperator("add", currentNumber);
+//     }
+//     if (button.id === "equals") {
+//       operate(operator, firstNumber, currentNumber)
+//     }
+//   });
+// });
+
+// function storeCurrentNumber(value) {
+//   if (value !== "0") {
+//     if (currentNumber.length < 9) {
+//       currentNumber += value;
+//       renderDisplay(currentNumber);
+//     }
+//   } else if (value === "0" && currentNumber !== "") {
+//     if (currentNumber.length < 9) {
+//       currentNumber += value;
+//       renderDisplay(currentNumber);
+//     }
+//   }
+// }
+
+// function storeOperator(operation, number) {
+//   operator = operation;
+//   firstNumber = number;
+//   currentNumber = "";
+// }
+
+// function add(valueA, valueB) {
+//   return Number(valueA) + Number(valueB);
+// }
+
+// function subtract(valueA, valueB) {
+//   return Number(valueA) - Number(valueB);
+// }
+
+// function multiply(valueA, valueB) {
+//   return Number(valueA) * Number(valueB);
+// }
+
+// function divide(valueA, valueB) {
+//   return Number(valueA) / Number(valueB);
+// }
+
+// function operate(operator, valueA, valueB) {
+//   let result;
+//   switch (operator) {
+//     case "add":
+//       result = add(valueA, valueB);
+//       break;
+//     default:
+//       break;
+//   }
+//   // if (operator === "add") {
+//   //   result = add(valueA, valueB);
+//   // }
+//   renderDisplay(result);
+// }
+
+// function renderDisplay(value) {
+//   const displayDiv = document.querySelector(".display-row");
+//   displayDiv.textContent = value;
+// }
+
+// function reset() {
+//   const displayDiv = document.querySelector(".display-row");
+//   displayDiv.textContent = "0";
+//   currentNumber = "";
+//   firstNumber = "";
+//   secondNumber = "";
+// }
